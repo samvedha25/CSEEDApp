@@ -1,0 +1,162 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(225, 237, 224, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.header-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--forest-green);
+}
+
+.header-nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-nav-links a {
+  color: var(--forest-green);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-nav-links a:hover {
+  color: var(--forest-light);
+}
+
+.welcome-section {
+  /* Reduced min-height and padding so the next section (features) sits closer to the CTAs */
+  min-height: 70vh;
+  background: linear-gradient(to bottom, var(--sage-lightest), var(--sage-lighter));
+  display: flex;
+  align-items: center;
+  padding: 60px 0 40px;
+  position: relative;
+}
+
+.welcome-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-title {
+  font-size: 3.5rem;
+  color: var(--forest-green);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.welcome-description {
+  font-size: 1.25rem;
+  color: var(--forest-dark);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background-color: var(--forest-green);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 2rem;
+}
+
+.cta-button:hover {
+  background-color: var(--forest-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.features-section {
+  /* Tighten vertical spacing for the features/cards so they sit closer to the welcome CTAs */
+  padding: 3rem 0;
+  background-color: var(--sage-lighter);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.feature-card {
+  background-color: rgba(253, 250, 246, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  color: var(--forest-green);
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--forest-dark);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.feature-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--forest-light);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.feature-link:hover {
+  color: var(--forest-green);
+}
+
+.footer {
+  background-color: var(--forest-green);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .welcome-title {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
